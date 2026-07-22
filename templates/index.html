@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="pagination top">
+    {% if paginator.previous %}
+        <a href="{{ config.base_url }}" class="nav-link">|← oldest</a>
+        <a href="{{ paginator.previous }}" class="nav-link">← prev</a>
+    {% else %}
+        <span class="nav-link disabled">|← oldest</span>
+        <span class="nav-link disabled">← prev</span>
+    {% endif %}
+
+    <a href="{{ config.base_url }}" class="nav-link random">random</a>
+
+    {% if paginator.next %}
+        <a href="{{ paginator.next }}" class="nav-link">next →</a>
+        <a href="{{ paginator.last }}" class="nav-link">newest →|</a>
+    {% else %}
+        <span class="nav-link disabled">next →</span>
+        <span class="nav-link disabled">newest →|</span>
+    {% endif %}
+</div>
+
+<div class="posts">
+    {% for page in paginator.pages %}
+        <article class="post">
+            <header class="post-header">
+                <span class="post-id"><a href="{{ page.permalink }}">#{{ page.title }}</a></span>
+                <span class="separator">—</span>
+                <span class="post-date"><a href="{{ page.permalink }}">{{ page.date | date(format="%b %-d, %Y") }}</a></span>
+                <span class="post-author">by <strong>{{ config.author }}</strong></span>
+            </header>
+            <div class="post-content">
+                {{ page.content | safe }}
+            </div>
+        </article>
+    {% endfor %}
+</div>
+{% endblock content %}

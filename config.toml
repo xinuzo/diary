@@ -1,0 +1,12 @@
+base_url = "https://xinuzo.github.io/wall"
+title = "writing on a wall"
+description = "because adulthood is lonely"
+author = "Rendi Adinata"
+
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+compile_sass = true
+minify_html = false
+
+[extra]
+avatar = "/images/avatar.jpg"
