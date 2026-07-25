@@ -1,6 +1,6 @@
 base_url = "https://xinuzo.github.io/wall"
-title = "writing on a wall"
-description = "because adulthood is lonely"
+title = "日記"
+description = "hi, i learn to write here. "
 author = "Rendi Adinata"
 
 generate_feeds = true
