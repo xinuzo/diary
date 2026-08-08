@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ get_url(path="css/style.css") }}">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ get_url(path=" css/style.css") }}">
 </head>
+
 <body>
     <div class="layout">
         <aside class="sidebar">
@@ -16,7 +19,7 @@
                 <h1><a href="{{ config.base_url }}">{{ config.title }}</a></h1>
                 <p class="subtitle">{{ config.description }}</p>
             </header>
-            
+
             <nav>
                 <a href="{{ config.base_url }}">Wall</a> •
                 <a href="{{ config.base_url }}/about">About</a> •
@@ -25,17 +28,16 @@
             </nav>
 
             <div class="avatar">
-                <img src="{{ get_url(path="images/avatar.jpg") }}" alt="Avatar">
+                <img src="{{ get_url(path=" images/avatar.jpg") }}" alt="Avatar">
             </div>
 
             <footer>
                 <p>
-                    <a href="mailto:contact@xinuzo.com">Mail list</a> • 
+                    <a href="mailto:contact@xinuzo.com">Mail list</a> •
                     <a href="{{ config.base_url }}/atom.xml">Atom feed</a>
                 </p>
                 <p>
                     Generated with <a href="https://www.getzola.org">Zola</a><br>
-                    Theme built by Antigravity
                 </p>
             </footer>
         </aside>
@@ -45,4 +47,5 @@
         </main>
     </div>
 </body>
+
 </html>
