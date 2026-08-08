@@ -1,5 +1,3 @@
 +++
-paginate_by = 20
-sort_by = "date"
-template = "index.html"
+redirect_to = "posts"
 +++

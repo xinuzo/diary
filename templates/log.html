@@ -3,7 +3,7 @@
 {% block content %}
 <div class="log-container">
     <h2>Log by month</h2>
-    {% set section = get_section(path="_index.md") %}
+    {% set section = get_section(path="posts/_index.md") %}
     {% set current_month = "" %}
     {% for page in section.pages %}
         {% set page_month = page.date | date(format="%b %Y") %}
