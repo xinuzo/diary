@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="log-container">
+    <h2>Log by month</h2>
+    {% set section = get_section(path="_index.md") %}
+    {% set current_month = "" %}
+    {% for page in section.pages %}
+        {% set page_month = page.date | date(format="%b %Y") %}
+        {% if page_month != current_month %}
+            <h3>{{ page_month }}</h3>
+            {% set_global current_month = page_month %}
+        {% endif %}
+        <div class="log-entry">
+            <a href="{{ page.permalink }}">#{{ page.title }}</a> — {{ page.date | date(format="%b %-d, %Y") }}
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}

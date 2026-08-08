@@ -2,9 +2,9 @@
 
 {% block content %}
 <div class="pagination top">
-    {% if paginator.previous %}
-        <a href="{{ config.base_url }}" class="nav-link">|← oldest</a>
-        <a href="{{ paginator.previous }}" class="nav-link">← prev</a>
+    {% if paginator.next %}
+        <a href="{{ paginator.last }}" class="nav-link">|← oldest</a>
+        <a href="{{ paginator.next }}" class="nav-link">← prev</a>
     {% else %}
         <span class="nav-link disabled">|← oldest</span>
         <span class="nav-link disabled">← prev</span>
@@ -12,9 +12,9 @@
 
     <a href="{{ config.base_url }}" class="nav-link random">random</a>
 
-    {% if paginator.next %}
-        <a href="{{ paginator.next }}" class="nav-link">next →</a>
-        <a href="{{ paginator.last }}" class="nav-link">newest →|</a>
+    {% if paginator.previous %}
+        <a href="{{ paginator.previous }}" class="nav-link">next →</a>
+        <a href="{{ config.base_url }}" class="nav-link">newest →|</a>
     {% else %}
         <span class="nav-link disabled">next →</span>
         <span class="nav-link disabled">newest →|</span>
