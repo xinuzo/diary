@@ -4,6 +4,8 @@ template = "page.html"
 date = 2026-08-08
 +++
 
+Note: None of these really work yet, but I'm planning to do them once I have become more famous in the future (I hope, lol)
+
 This microblog is really noisy, because I push things to it several times a week. If for some reason you want to see updates that often, the two options are:
 
 ## Mailing list
