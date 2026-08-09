@@ -14,4 +14,4 @@ Subscribe to the email list at [https://list.xinuzo.github.io](#).
 This is the same server that manages my actual blog, and most people subscribe to just the blog. But there is an option to also (or only) get wall updates.
 
 ## Atom feed
-Use the Atom feed at [https://xinuzo.github.io/wall/atom.xml](/wall/atom.xml).
+Use the Atom feed at [https://xinuzo.github.io/diary/atom.xml](/diary/atom.xml).
