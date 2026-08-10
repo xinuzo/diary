@@ -3,8 +3,8 @@ param (
     [string]$PostNumber
 )
 
-# Get the current date in YYYY-MM-DD format
-$dateStr = (Get-Date).ToString("yyyy-MM-dd")
+# Get the current date in YYYY-MM-DDTHH:MM:SS format
+$dateStr = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ss")
 $filePath = "content\posts\$PostNumber.md"
 
 # Check if the file already exists so we don't accidentally overwrite it
