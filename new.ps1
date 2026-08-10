@@ -19,7 +19,7 @@ if (Test-Path $filePath) {
 # Create the TOML frontmatter block
 $content = @"
 +++
-title = "$PostNumber: $Title"
+title = "${PostNumber}: $Title"
 date = $dateStr
 +++
 
