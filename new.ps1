@@ -1,6 +1,9 @@
 param (
     [Parameter(Mandatory=$true)]
-    [string]$PostNumber
+    [string]$PostNumber,
+    
+    [Parameter(Mandatory=$true)]
+    [string]$Title
 )
 
 # Get the current date in YYYY-MM-DDTHH:MM:SS format
@@ -16,7 +19,7 @@ if (Test-Path $filePath) {
 # Create the TOML frontmatter block
 $content = @"
 +++
-title = "$PostNumber"
+title = "$PostNumber: $Title"
 date = $dateStr
 +++
 
